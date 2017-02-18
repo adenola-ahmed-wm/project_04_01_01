@@ -41,7 +41,7 @@ router.get('/speakers/:speakerid', function(req, res, next) {
   appdata.speakers.forEach(function(item) {
     if (item.shortname == req.params.speakerid) {
       myArtists.push(item);
-        myArtwork = myArtwork.concat(item.artwork);
+      myArtwork = myArtwork.concat(item.artwork);
     }
   });
   res.render('speakers', {
@@ -51,6 +51,5 @@ router.get('/speakers/:speakerid', function(req, res, next) {
     page: 'artistDetail'
   });
 });
-
 
 module.exports = router;
