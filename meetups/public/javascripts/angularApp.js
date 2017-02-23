@@ -1,6 +1,7 @@
 var myApp = angular.module('myApp', [
     //Dependencies of what the application needs to run
-    'ngRoute'
+    'ngRoute',
+	'meetingController'
 ]);
 
 myApp.config([
