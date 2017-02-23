@@ -15,6 +15,10 @@ myApp.config([
             templateUrl: 'partials/speakers.ejs',
             controller: 'HomeController'
         })
+        .when('/speakers/:speakerid', {
+            templateUrl: 'partials/speakers.ejs',
+            controller: 'DetailsController'
+        })
         .otherwise({
             redirectTo: '/home'
         });
