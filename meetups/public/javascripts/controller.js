@@ -1,6 +1,6 @@
 var meetupsControllers = angular.module('meetupsControllers', []);
 
-meetupsControllers.controller('HomeController', ['$scope', '$http', function ($scope, $http)
+meetupsControllers.controller('homeController', ['$scope', '$http', function ($scope, $http)
 {
   // $scope.artists =
     $http.get('data.json')
@@ -12,7 +12,7 @@ meetupsControllers.controller('HomeController', ['$scope', '$http', function ($s
     });
 }]);
 
-meetupsControllers.controller('DetailsController', ['$scope', '$http', function ($scope, $http)
+meetupsControllers.controller('detailsController', ['$scope', '$http', function ($scope, $http)
 {
   // $scope.artists =
     $http.get('data.json')
