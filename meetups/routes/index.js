@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var appdata = require('../data.json');
+var appdata = require('../public/data.json');
 
 /* get home page */
 router.get('/', function(req, res, next) {
   var myArtwork = [];
   var myArtists = [];
-  myArtists = appdata.speakers;
+  myArtists = appdata.specakers;
   appdata.speakers.forEach(function(item) {
     myArtwork = myArtwork.concat(item.artwork);
   });
