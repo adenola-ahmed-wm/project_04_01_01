@@ -1,25 +1,13 @@
-var meetupsControllers = angular.module('meetupsControllers', []);
+var meetingController = angular.module('meetingController', []);
 
-meetupsControllers.controller('homeController', ['$scope', '$http', function ($scope, $http)
-{
-  // $scope.artists =
-    $http.get('data.json')
-    .then(function(response){
-      $scope.artists = response.data.speakers;
-    },
-    function(result){
-      console.log('HTTP request failed with result: ' + result);
-    });
-}]);
-
-meetupsControllers.controller('detailsController', ['$scope', '$http', function ($scope, $http)
-{
-  // $scope.artists =
-    $http.get('data.json')
-    .then(function(response){
-      $scope.artists = response.data.speakers;
-    },
-    function(result){
-      console.log('HTTP request failed with result: ' + result);
-    });
+meetingController.controller('HomeController', ['$scope', '$http', function($scope, $http) {
+	$http.get('/data.json')
+	.then(function(response){
+			$scope.speakers = response.data.speakers;
+			$sope.info =  null;
+		},
+		function(error){
+			console.error(error);
+		}
+	)
 }]);

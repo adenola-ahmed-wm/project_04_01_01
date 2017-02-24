@@ -1,21 +1,21 @@
 <article class="speakerslist">
     <section class="layout">
         <div class="speakers">
-                <article class="artist group" ng-repeat="item in artists">
-                    <h3>
-                         {{item.title}}
-                        <span class="small">
-                            with
-                            <a href="/speakers/{{item.shortname}}"> {{item.name}} </a>
-                        </span>
-                    </h3>
-
-                    <p>
-                        <a href="#!/speakers/{{item.shortname}}">
-                            <img class="speaker" src="/images/speakers/{{item.shortname}}_tn.jpg" alt="Photo of {{item.shortname}}"/>
+            <article class="artist group" ng-repeat="item in speakers">
+                <h3>
+                    {{item.title}}
+                    <span class="small">
+                        with
+                        <a href="/speakers/<%= item.shortname %>"> {{item.name}} </a>
+                    </span>
+        	</h3>
+                <p>
+                    <a href="/speakers/{{item.shortname}}">
+                        <img class="speaker" src="/images/speakers/{{item.shortname}}_tn.jpg" alt="Photo of {{item.shortname}}"/>
                         </a>
-                    </p>
-                </article>
+                    {{info}}
+                </p>
+            </article>
         </div>
     </section>
 </article>
