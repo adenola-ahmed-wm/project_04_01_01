@@ -4,7 +4,7 @@ meetingController.controller('HomeController', ['$scope', '$http', function($sco
 	$http.get('/data.json')
 	.then(function(response){
 			$scope.speakers = response.data.speakers;
-			$sope.info =  null;
+			$scope.info =  null;
 		},
 		function(error){
 			console.error(error);
