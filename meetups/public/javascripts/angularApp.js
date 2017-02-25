@@ -1,7 +1,8 @@
 var myApp = angular.module('myApp', [
     //Dependencies of what the application needs to run
-    'ngRoute',
-	'meetingController'
+     'ngRoute',
+	   'meetupsControllers',
+     'ngSanitize'
 ]);
 
 myApp.config([
@@ -12,12 +13,12 @@ myApp.config([
             controller: 'HomeController'
         })
         .when('/speakers', {
-            templateUrl: 'partials/speakerslist.ejs',
-            controller: 'HomeController'
+            templateUrl: 'partials/content/speakerslist.ejs',
+            controller: 'SpeakerController'
         })
         .when('/details/:speakersid', {
-            templateUrl: 'partials/speakerslist.ejs',
-            controller: 'detailsController'
+            templateUrl: 'partials/content/speakerslist.ejs',
+            controller: 'DetailsController'
         })
         .otherwise({
             redirectTo: '/home'

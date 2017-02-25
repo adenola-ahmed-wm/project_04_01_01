@@ -1,20 +1,24 @@
+<div class="{{page}}">
 <article class="speakerslist">
     <section class="layout">
-        <div class="speakers" ng-repeat="item in artists">
-                <article class="artist group">
+        <div class="speakers">
+                <article class="artist group" ng-repeat="item in artists">
                     <h3>
                          {{item.title}}
                         <span class="small">
                             with
-                            <a href="/speakers/{{item.shortname}}"> {{item.name}} </a>
+                            <a href="#!/details/{{item.shortname}}"> {{item.name}} </a>
                         </span>
                     </h3>
                     <p>
-                        <a href="#!/speakers/{{item.shortname}}">
+                        <a href="#!/details/{{item.shortname}}">
                             <img class="speaker" src="/images/speakers/{{item.shortname}}_tn.jpg" alt="Photo of {{item.shortname}}"/>
                         </a>
+                        <span ng-show="speakerList">{{item.summary}}</span>
+                        <span ng-show="speakersDetail" ng-bind-html="item.description"></span>
                     </p>
                 </article>
         </div>
     </section>
 </article>
+</div>

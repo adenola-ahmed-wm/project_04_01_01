@@ -3,9 +3,10 @@
   <head>
     <% include partials/template/head.ejs %>
   </head>
-  <body class="<%= page %>" ng-app="myApp">
+  <body ng-app="myApp">
     <% include partials/template/header.ejs %>
     <section class="layout">
+      <!-- ng-view is where the content is swapped into -->
       <div class="primary" ng-view>
       </div> <!-- Primary -->
       <aside class="secondary">
