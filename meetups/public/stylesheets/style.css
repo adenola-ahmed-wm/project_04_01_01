@@ -117,8 +117,8 @@ p {
 
 .layout {
   *zoom: 1;
-  max-width: 61em;
-  _width: 61em;
+  max-width: 70em;
+  _width: 70em;
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
@@ -418,4 +418,3 @@ header .navigation ul.nav li:hover a {
     padding-right: 0;
   }
 }
-

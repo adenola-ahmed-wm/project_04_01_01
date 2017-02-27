@@ -6,7 +6,7 @@ var appdata = require('../public/data.json');
 router.get('/', function(req, res, next) {
   var myArtwork = [];
   var myArtists = [];
-  myArtists = appdata.specakers;
+  myArtists = appdata.speakers;
   appdata.speakers.forEach(function(item) {
     myArtwork = myArtwork.concat(item.artwork);
   });
