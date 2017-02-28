@@ -22,7 +22,7 @@ meetupsControllers.controller('SpeakerController', ['$scope', '$http', function(
     });
 }]);
 
-meetupsControllers.controller('DetailsController', ['$scope', '$http', '$routeParams', '$sce', function($scope, $http, $routeParams, $sce){
+meetupsControllers.controller('DetailsController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
     $http.get('data.json')
     .then(function(response){
         var speakers = response.data.speakers;
@@ -31,7 +31,6 @@ meetupsControllers.controller('DetailsController', ['$scope', '$http', '$routePa
         speakers.forEach(function(item){
             if(item.shortname === $routeParams.name){
                 artists.push(item);
-                $scope.description = item.description;
             }
         });
 
